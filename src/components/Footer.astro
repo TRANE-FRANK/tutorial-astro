@@ -1,0 +1,30 @@
+---
+import Social from "./Social.astro"
+
+const platforms = ["github", "Instagram", "Facebook"]
+const username = "withastro"
+---
+
+<footer>
+  <p>
+    ¡Más información sobre mis proyectos en
+
+    {
+      platforms.map((platform) => (
+        <Social platform={platform} username={username} />
+      ))
+    }
+  </p>
+</footer>
+
+<style>
+  footer {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    margin-top: 2rem;
+    background-color: purple;
+    color: whitesmoke;
+    border-radius: 10px;
+  }
+</style>
